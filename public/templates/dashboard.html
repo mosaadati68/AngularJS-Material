@@ -1,0 +1,63 @@
+<style>
+
+
+    /*
+    Copyright 2016 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at https://material.angularjs.org/license.
+    */
+
+    .multi_line .md-toast-content{
+        padding-top:10px;
+        padding-bottom:10px;
+        max-width:350px;
+
+    }
+    .multi_line .md-toast-content .md-toast-text{
+        max-height: 150px;
+        overflow-y: hidden;
+        display: block;
+    }
+</style>
+<div ng-controller="dashboardController" class="inset toastdemoCustomUsage" ng-cloak="" style="height:300px; padding: 25px;" ng-app="MyApp">
+    <div layout="row">
+
+        <p>
+            Toast can have multiple actions:
+        </p>
+
+        <md-button ng-click="showCustomToast()" class="md-raised" style="padding-left: 10px;padding-right: 10px;">
+            Show Custom Toast
+        </md-button>
+
+    </div>
+    <script type="text/ng-template" id="toast-template.html">
+        <md-toast class="multi_line">
+
+            <div style="width:100px;">
+                <img src="https://www.elivio.com/assets/logo.png" style="width:100%;height:150px" alt="" />
+            </div>
+            <div  >
+     <span class="md-toast-text" >
+    
+    Custom toast! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel odit non nihil sapiente ad quisquam, quos eligendi illo harum incidunt debitis minima illum repudiandae reiciendis porro eveniet dignissimos cumque hic. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum repellendus quis tempora corporis soluta, neque facere, aut rerum aperiam aliquam nobis sit natus magni sequi deleniti ex, vero harum nesciunt.</span>
+                <div >
+                    <md-button class="md-highlight" ng-click="openMoreInfo($event)">
+                        More info
+                    </md-button>
+                    <md-button ng-click="closeToast()">
+                        Close
+                    </md-button>
+
+                </div>
+            </div>
+
+
+
+
+        </md-toast>
+    </script></div>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at https://material.angularjs.org/license.
+-->
