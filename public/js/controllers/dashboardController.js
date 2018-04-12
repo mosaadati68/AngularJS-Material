@@ -2,11 +2,18 @@
 
     var isDlgOpen;
 
-    angular
-        myApp.controller('dashboardController', function($scope, $mdToast) {
+        myApp.controller('dashboardController', function($scope, $mdToast, $mdSidenav) {
+            $scope.openLeftMenu = function() {
+                $mdSidenav('left').toggle();
+            };
+
+            $scope.openRightMenu = function() {
+                $mdSidenav('right').toggle();
+            };
+
             $scope.showCustomToast = function() {
                 $mdToast.show({
-                    hideDelay   : 0,
+                    hideDelay   : 3000,
                     position    : 'top right',
                     controller  : 'ToastCtrl',
                     templateUrl : 'toast-template.html'
